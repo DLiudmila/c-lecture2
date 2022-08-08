@@ -1,9 +1,13 @@
 ﻿int[] array = new int[10];
 
-a(array);
-b(array);
+Insert(array);
+Print(array);
+int x = indexOf(array, 3);
+Console.WriteLine("position="+x);
 
-void a(int[] collection)
+
+
+void Insert(int[] collection)
 {
     int Length = collection.Length;
     int i = 0;
@@ -14,7 +18,7 @@ void a(int[] collection)
     }
 }
 
-void b(int[] collection)
+void Print(int[] collection)
 {
     int Length = collection.Length;
     int i = 0;
@@ -23,4 +27,21 @@ void b(int[] collection)
         Console.WriteLine(collection[i]);
         i++;
     }
+}
+
+int indexOf(int[] array, int number)
+{
+    int Length = array.Length;
+    int i = 0;
+    int position = -1;
+    while (i < Length)
+    {
+        if (array[i] == number)
+        {
+            position = i;
+            break;
+        }
+        i++;
+    }
+    return position;
 }
